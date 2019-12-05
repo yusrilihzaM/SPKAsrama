@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">asrama</string>
+    <string name="login">LOGIN</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="data_mahasiswa">Data Mahasiswa</string>
+    <string name="kriteria">Kriteria</string>
+    <string name="tentang_pengembang">Tentang Pengembang</string>
+    <string name="peraturan_asrama">Peraturan Asrama</string>
+    <string name="memasukkan_data_mahasiswa">Memasukkan Data Mahasiswa</string>
+    <string name="absen_rutin">Absen Rutin</string>
+    <string name="absen_non_rutin">Absen Non Rutin</string>
+    <string name="pelanggaran">Pelanggaran</string>
+    <string name="nim_mahasiswa">NIM Mahasiswa</string>
+    <string name="nama_mahasiswa">Nama Mahasiswa</string>
+</resources>
