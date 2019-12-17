@@ -66,7 +66,6 @@ public class List_mahasiswa extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(List_mahasiswa.this, TambahMahasiswa.class));
-                finish();
             }
         });
         getalldata();
@@ -85,6 +84,14 @@ public class List_mahasiswa extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mahasiswaList.clear();
+        getalldata();
+        adapter.setdata(mahasiswaList);
+        recyclerView.setAdapter(adapter);
+    }
 
 
 

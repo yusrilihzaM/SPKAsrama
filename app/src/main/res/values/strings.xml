@@ -24,4 +24,37 @@
     <string name="positif">Positif</string>
     <string name="negatif">Negatif</string>
     <string name="peraturan">PERATURAN</string>
+    <string name="value">VALUE</string>
+    <string name="ranking">RANGKING</string>
+    <string name="klasifikasi">KLASIFIKASI</string>
+    <string-array name="data_nim">
+        <item>"170441100012"</item>
+        <item>"170441100024"</item>
+        <item>"170441100029"</item>
+        <item>"170441100056"</item>
+    </string-array>
+    <string-array name="data_nama">
+        <item>"Muhammad Amfahtori Wijarnoko"</item>
+        <item>"Ahmad Try Bayu Al Haq"</item>
+        <item>"Linawati"</item>
+        <item>"Moh. Yusril Ihza Maulana"</item>
+    </string-array>
+    <string-array name="data_peran">
+        <item>"Perhitungan Manual\nDokumentasi Laporan"</item>
+        <item>"Desain UI\nPrototipe"</item>
+        <item>"Desain Sistem"</item>
+        <item>"Programmer"</item>
+    </string-array>
+    <string-array name="data_email">
+        <item>"170441100012@student.trunojoyo.ac.id"</item>
+        <item>"170441100024@student.trunojoyo.ac.id"</item>
+        <item>"170441100029@student.trunojoyo.ac.id"</item>
+        <item>"170441100056@student.trunojoyo.ac.id"</item>
+    </string-array>
+    <array name="data_photo">
+        <item>@drawable/icuser</item>
+        <item>@drawable/icuser</item>
+        <item>@drawable/icuser</item>
+        <item>@drawable/icuser</item>
+    </array>
 </resources>

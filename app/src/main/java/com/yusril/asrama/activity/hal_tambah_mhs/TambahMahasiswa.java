@@ -24,7 +24,6 @@ public class TambahMahasiswa extends AppCompatActivity {
     private static SQLiteDatabase sqLiteDatabase;
     private static DatabaseHelper databaseHelper;
     private static DataHelper dataHelper;
-    private static final String EXTRA_DATA_MAHASISWA="extra_data_mahasiswa";
     private Cursor cursor;
     private Double absenRutin,absenNonRutin,pelanggaran,catatan;
     private EditText
@@ -48,7 +47,6 @@ public class TambahMahasiswa extends AppCompatActivity {
         edtabsenrutinonnmhs=findViewById(R.id.edt_absen_non_rutin);
         edtpelanggaranmhs=findViewById(R.id.edt_pelanggaran);
         edtcatatanmhs=findViewById(R.id.edt_catatan);
-        displayDatabaseInfo();
     }
     private void displayDatabaseInfo(){
         databaseHelper=new DatabaseHelper(this);
@@ -81,14 +79,9 @@ public class TambahMahasiswa extends AppCompatActivity {
                 catatan=Double.parseDouble(edtcatatanmhs.getText()+"");
                 dataHelper.insertMhs(nim,nama,absenRutin,absenNonRutin,pelanggaran,catatan);
                 Toast.makeText(getApplicationContext(),"Data Mahasiswa Telah di Simpan",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(TambahMahasiswa.this, List_mahasiswa.class));
                 finish();
                 return true;
-//            case R.id.action_delete:
-//                Toast.makeText(getApplicationContext(),"Data Mahasiswa Telah di Hapus",Toast.LENGTH_SHORT).show();
-////                startActivity(new Intent(TambahMahasiswa.this, List_mahasiswa.class));
-//                finish();
-//                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }

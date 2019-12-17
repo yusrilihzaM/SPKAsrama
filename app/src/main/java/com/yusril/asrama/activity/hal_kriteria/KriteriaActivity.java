@@ -53,7 +53,7 @@ public class KriteriaActivity extends AppCompatActivity {
             btn_save.setText(txt_save);
         }
 
-        displayDatabaseInfo();
+//        displayDatabaseInfo();
         dataHelper=new DataHelper(KriteriaActivity.this);
         dataHelper.open();
 
@@ -97,7 +97,7 @@ public class KriteriaActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        displayDatabaseInfo();
+//        displayDatabaseInfo();
     }
     private void getalldata(){
         dataHelper.open();

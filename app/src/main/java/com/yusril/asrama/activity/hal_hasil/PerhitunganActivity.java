@@ -40,7 +40,7 @@ public class PerhitunganActivity extends AppCompatActivity {
             ,tvNamaMax,tvAbsenruitnMax,tvabsennonrutinMax,tvpelanggaranMax,tvcatatanMax
             ,tvNamaMin,tvAbsenruitnMin,tvabsennonrutinMin,tvpelanggaranMin,tvcatatanMin
             ,tvNamaJarak,tvJarakPositive,tvJarakNegativ
-            ,tvNamaValue,nilaivalue,ranking;
+            ,tvNamaValue,nilaivalue,ranking,klasifikasi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +57,7 @@ public class PerhitunganActivity extends AppCompatActivity {
         modelSPK.clearPembobotan();
         modelSPK.clearDatajarak();
         modelSPK.clearValue();
+        modelSPK.clearKlasifikasi();
         modelSPK.addList(this);
         modelSPK.DataX();
         modelSPK.addNormalisasi();
@@ -67,6 +68,7 @@ public class PerhitunganActivity extends AppCompatActivity {
         modelSPK.addValue(this);
         insertDataValue();
         modelSPK.addValueList(this);
+        modelSPK.addklasifikasi();
 
         xrutin = findViewById(R.id.xrutin);
         xrutinnon = findViewById(R.id.xrutinnon);
@@ -244,19 +246,24 @@ public class PerhitunganActivity extends AppCompatActivity {
         }
 //        displayDatabaseInfo();
         insertDataValue();
+///Valuee
         for (int i=0;i<modelSPK.id.size();i++){
             tvNamaValue=new TextView(this);
             nilaivalue=new TextView(this);
             ranking=new TextView(this);
+            klasifikasi=new TextView(this);
             rowValue = new TableRow(this);
 
             int rank=i+1;
             Double value=modelSPK.nilai_value.get(i);
             String nama=modelSPK.nama_value.get(i);
+            String getklass=modelSPK.klasifikasi.get(i);
+            String warna=modelSPK.klasifikasiWarna.get(i);
 
             tvNamaValue.setTextSize(10);
             nilaivalue.setTextSize(10);
             ranking.setTextSize(10);
+            klasifikasi.setTextSize(10);
 
             TableRow.LayoutParams params = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f);
             TableRow.LayoutParams params1 = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1.1f);
@@ -265,21 +272,26 @@ public class PerhitunganActivity extends AppCompatActivity {
             tvNamaValue.setLayoutParams(params);
             nilaivalue.setLayoutParams(params);
             ranking.setLayoutParams(params);
+            klasifikasi.setLayoutParams(params);
 
             tvNamaValue.setPadding(0, 5, 0, 5);
             nilaivalue.setPadding(0, 5, 0, 5);
             ranking.setPadding(0, 5, 0, 5);
+            klasifikasi.setPadding(0, 5, 0, 5);
 
             tvNamaValue.setBackgroundColor(getResources().getColor(R.color.white));
             nilaivalue.setBackgroundColor(getResources().getColor(R.color.white));
             ranking.setBackgroundColor(getResources().getColor(R.color.white));
+            klasifikasi.setBackgroundColor(Color.parseColor(warna));
 
             tvNamaValue.setText(nama);
             nilaivalue.setText(value+"");
             ranking.setText(rank+"");
+            klasifikasi.setText(getklass+"");
             rowValue.addView(tvNamaValue);
             rowValue.addView(nilaivalue);
             rowValue.addView(ranking);
+            rowValue.addView(klasifikasi);
             tabelValue.addView(rowValue);
         }
 

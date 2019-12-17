@@ -1,38 +1,18 @@
 package com.yusril.asrama.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.TextView;
 
 import com.yusril.asrama.Database.DataHelper;
 import com.yusril.asrama.Database.DatabaseContract;
 import com.yusril.asrama.Database.DatabaseHelper;
-import com.yusril.asrama.R;
-import com.yusril.asrama.activity.hal_tambah_mhs.ModelMahasiswa;
-import com.yusril.asrama.activity.hal_tambah_mhs.TambahMahasiswa;
-import com.yusril.asrama.modelid;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static com.yusril.asrama.Database.DatabaseContract.mahasiswa.ID_MAHASISWA;
-import static android.provider.BaseColumns._ID;
-import static com.yusril.asrama.Database.DatabaseContract.kriteria.ID_KRITERIA;
 import static com.yusril.asrama.Database.DatabaseContract.kriteria.TABLE_NAME_KRITERIA;
-import static com.yusril.asrama.Database.DatabaseContract.kriteria.KOLOM_KRITERIA_ABSEN_RUTIN;
-import static com.yusril.asrama.Database.DatabaseContract.kriteria.KOLOM_KRITERIA_ABSEN_NON_RUTIN;
-import static com.yusril.asrama.Database.DatabaseContract.kriteria.KOLOM_KRITERIA_PELANGGARAN;
-import static com.yusril.asrama.Database.DatabaseContract.kriteria.KOLOM_KRITERIA_CATATAN;
 
-import static com.yusril.asrama.Database.DatabaseContract.mahasiswa.TABLE_NAME_MAHASISWA;
-import static com.yusril.asrama.Database.DatabaseContract.mahasiswa.KOLOM_MHS_NIM;
-import static com.yusril.asrama.Database.DatabaseContract.mahasiswa.KOLOM_MHS_NAMA;
-import static com.yusril.asrama.Database.DatabaseContract.mahasiswa.KOLOM_MHS_ABSEN_RUTIN;
-import static com.yusril.asrama.Database.DatabaseContract.mahasiswa.KOLOM_MHS_ABSEN_NON_RUTIN;
-import static com.yusril.asrama.Database.DatabaseContract.mahasiswa.KOLOM_MHS_PELANGGARAN;
-import static com.yusril.asrama.Database.DatabaseContract.mahasiswa.KOLOM_MHS_CATATAN;
 import static com.yusril.asrama.Database.DatabaseContract.tabel_value.KOLOM_VALUE;
 import static com.yusril.asrama.Database.DatabaseContract.tabel_value.TABLE_NAME_VALUE;
 
@@ -64,6 +44,8 @@ public class ModelSPK {
     public ArrayList<Integer> id_value=new ArrayList<>();
     public  ArrayList<String> nama_value=new ArrayList<>();
     public ArrayList<Double> nilai_value=new ArrayList<>();
+    public  ArrayList<String> klasifikasi=new ArrayList<>();
+    public  ArrayList<String> klasifikasiWarna=new ArrayList<>();
     public Double xrutin=0.0;
     public Double xnonrutin=0.0;
     public Double xpel=0.0;
@@ -81,6 +63,7 @@ public class ModelSPK {
     public Double Minnonrutin=0.0;
     public Double Minpel=0.0;
     public Double Mincat=0.0;
+    public String Sklasifikasi, warna;
     //Nilai X
     public double Xabsenrutin, Xabsennonrutin, Xpelangaran, Xcatatan;
     public Cursor cekdata(Context  context){
@@ -173,7 +156,7 @@ public class ModelSPK {
     }
     public void cleardatanormalisai(){
 
-       Normalisasiabsennonrutin.clear();
+        Normalisasiabsennonrutin.clear();
         Normalisasipelanggaran.clear();
         Normalisasicatatan.clear();
         Pembobotanabsenrutinne .clear();
@@ -212,7 +195,7 @@ public class ModelSPK {
     public void addValueList(Context  context){
         databaseHelper=new DatabaseHelper(context);
         sqLiteDatabase=databaseHelper.getReadableDatabase();
-        String query=String.format("SELECT * FROM "+ TABLE_NAME_VALUE+" ORDER BY "+KOLOM_VALUE+" ASC");
+        String query=String.format("SELECT * FROM "+ TABLE_NAME_VALUE+" ORDER BY "+KOLOM_VALUE+" DESC");
         cursor=sqLiteDatabase.rawQuery(query,null);
         while (cursor.moveToNext()){
             id_value.add(cursor.getInt(0));
@@ -222,4 +205,28 @@ public class ModelSPK {
         }
     }
 
+    public void addklasifikasi(){
+       for (int i=0;i<id.size();i++){
+            if(nilai_value.get(i)>0.75){
+                Sklasifikasi="Hijau";
+                warna="#06b11e";
+                klasifikasi.add(Sklasifikasi);
+                klasifikasiWarna.add(warna);
+            }else if(nilai_value.get(i)>0.30){
+                Sklasifikasi="Kuning";
+                warna="#e5e74d";
+                klasifikasi.add(Sklasifikasi);
+                klasifikasiWarna.add(warna);
+            }else{
+                Sklasifikasi="Merah";
+                warna="#ff0024";
+                klasifikasi.add(Sklasifikasi);
+                klasifikasiWarna.add(warna);
+            }
+        }
+    }
+    public void clearKlasifikasi(){
+        klasifikasi.clear();
+        klasifikasiWarna.clear();
+    }
 }

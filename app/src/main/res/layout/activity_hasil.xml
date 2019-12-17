@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_back"
     tools:context=".activity.hal_hasil.HasilActivity">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/step"
-        android:layout_width="131dp"
+        android:layout_width="300dp"
         android:layout_height="131dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="120dp"
-        android:layout_marginEnd="48dp"
         android:background="@drawable/bg_card"
         app:cardCornerRadius="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_add_kriteria"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -41,16 +41,17 @@
                 android:textSize="12sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/ranking"
-        android:layout_width="131dp"
+        android:layout_width="300dp"
         android:layout_height="131dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="35dp"
         android:background="@drawable/bg_card"
         app:cardCornerRadius="16dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step">
 
         <LinearLayout
             android:layout_width="match_parent"

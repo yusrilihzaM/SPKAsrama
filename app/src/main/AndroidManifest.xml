@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.hal_peraturan.PeraturanAsrama"></activity>
+        <activity android:name=".activity.hal_about.AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".activity.hal_kuota.KuotaActivity" />
+        <activity android:name=".activity.hal_peraturan.PeraturanAsrama" />
         <activity android:name=".activity.hal_hasil.PerhitunganActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -17,7 +20,7 @@
         </activity>
         <activity
             android:name=".activity.hal_tambah_mhs.DetailMahasiswaActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.hal_tambah_mhs.List_mahasiswa" />
@@ -34,14 +37,14 @@
         </activity>
         <activity
             android:name=".activity.hal_tambah_mhs.TambahMahasiswa"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.hal_tambah_mhs.List_mahasiswa" />
         </activity>
         <activity
             android:name=".activity.hal_kriteria.KriteriaActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.dashboard.Dashboard" />

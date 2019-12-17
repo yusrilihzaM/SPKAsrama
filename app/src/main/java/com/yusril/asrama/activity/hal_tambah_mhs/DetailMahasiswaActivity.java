@@ -84,14 +84,14 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
                 catatan=Double.parseDouble(edtcatatanmhs.getText()+"");
                 dataHelper.updateMhs(id,nim,nama,absenRutin,absenNonRutin,pelanggaran,catatan);
                 Toast.makeText(getApplicationContext(),"Data Mahasiswa Telah di Diupdate",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(DetailMahasiswaActivity.this, List_mahasiswa.class));
-//                finish();
+//                startActivity(new Intent(DetailMahasiswaActivity.this, List_mahasiswa.class));
+                finish();
                 return true;
             case R.id.action_delete:
                 Toast.makeText(getApplicationContext(),"Data Mahasiswa Telah di Hapus",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(DetailMahasiswaActivity.this, List_mahasiswa.class));
+//                startActivity(new Intent(DetailMahasiswaActivity.this, List_mahasiswa.class));
                 dataHelper.deleteMhs(id+"");
-//                finish();
+                finish();
                 return true;
         }
         return super.onOptionsItemSelected(item);

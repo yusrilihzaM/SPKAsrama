@@ -58,7 +58,6 @@ public class AdapterListMahasiswa extends RecyclerView.Adapter<AdapterListMahasi
                 Intent moveWithDataIntent = new Intent(mContext, DetailMahasiswaActivity.class);
                 moveWithDataIntent.putExtra(DetailMahasiswaActivity.EXTRA_DATA, mahasiswaList.get(position));
                 mContext.startActivity(moveWithDataIntent);
-                ((Activity)view.getContext()).finish();
             }
         });
     }
