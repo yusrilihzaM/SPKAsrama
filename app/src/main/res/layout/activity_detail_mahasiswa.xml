@@ -6,44 +6,22 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_back"
     tools:context=".activity.hal_tambah_mhs.TambahMahasiswa">
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/cerebrisans"
-        android:text="@string/memasukkan_data_mahasiswa"
-        android:textColor="#fff"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:textColor="#fff"
-        android:textSize="11sp"
-        android:text="Warga Asrama Universitas Trunojoyo Madura"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
@@ -63,9 +41,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:background="@drawable/bg_edt_add"
-                    android:textColor="#fff"
-                    android:inputType="number"
                     android:hint="@string/nim_mahasiswa"
+                    android:inputType="number"
+                    android:textColor="#fff"
                     android:textColorHint="#fff" />
             </LinearLayout>
 
@@ -76,8 +54,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -91,8 +68,8 @@
                     android:layout_marginLeft="8dp"
                     android:background="@drawable/bg_edt_add"
                     android:hint="@string/nama_mahasiswa"
-                    android:textColor="#fff"
                     android:inputType="text"
+                    android:textColor="#fff"
                     android:textColorHint="#fff" />
             </LinearLayout>
 
@@ -117,8 +94,8 @@
                     android:layout_marginLeft="8dp"
                     android:background="@drawable/bg_edt_add"
                     android:hint="@string/absen_rutin"
-                    android:textColor="#fff"
                     android:inputType="numberDecimal"
+                    android:textColor="#fff"
                     android:textColorHint="#fff" />
             </LinearLayout>
 
@@ -143,8 +120,8 @@
                     android:layout_marginLeft="8dp"
                     android:background="@drawable/bg_edt_add"
                     android:hint="@string/absen_non_rutin"
-                    android:textColor="#fff"
                     android:inputType="numberDecimal"
+                    android:textColor="#fff"
                     android:textColorHint="#fff" />
             </LinearLayout>
 
@@ -169,8 +146,8 @@
                     android:layout_marginLeft="8dp"
                     android:background="@drawable/bg_edt_add"
                     android:hint="@string/pelanggaran"
-                    android:textColor="#fff"
                     android:inputType="numberDecimal"
+                    android:textColor="#fff"
                     android:textColorHint="#fff" />
             </LinearLayout>
 
@@ -195,8 +172,8 @@
                     android:layout_marginLeft="8dp"
                     android:background="@drawable/bg_edt_add"
                     android:hint="Catatan"
-                    android:textColor="#fff"
                     android:inputType="numberDecimal"
+                    android:textColor="#fff"
                     android:textColorHint="#fff" />
             </LinearLayout>
 

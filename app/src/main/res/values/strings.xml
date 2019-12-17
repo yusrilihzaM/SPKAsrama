@@ -12,4 +12,16 @@
     <string name="pelanggaran">Pelanggaran</string>
     <string name="nim_mahasiswa">NIM Mahasiswa</string>
     <string name="nama_mahasiswa">Nama Mahasiswa</string>
+    <string name="hapus">Hapus</string>
+    <string name="tabel_nilai_x">Tabel Nilai X</string>
+    <string name="catatan">Catatan</string>
+    <string name="nama">Nama</string>
+    <string name="tabel_pembobotan">Tabel Pembobotan</string>
+    <string name="tabel_normalisasi">Tabel Normalisasi</string>
+    <string name="tabel_nilai_ideal">Tabel Nilai Ideal</string>
+    <string name="tabel_jarak">Tabel Jarak</string>
+    <string name="tabel_perankingan">Tabel Perankingan</string>
+    <string name="positif">Positif</string>
+    <string name="negatif">Negatif</string>
+    <string name="peraturan">PERATURAN</string>
 </resources>

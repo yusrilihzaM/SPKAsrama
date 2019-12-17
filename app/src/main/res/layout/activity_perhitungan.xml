@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_back"
+    tools:context=".activity.hal_hasil.PerhitunganActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:background="#f1f1f1"
+                android:text="@string/tabel_nilai_x"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#f1f1f1">
+
+                <TableRow
+                    android:padding="2dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/absen_rutin"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/absen_non_rutin"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/pelanggaran"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/catatan"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"/>
+
+                </TableRow>
+
+                <TableRow android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/xrutin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Absen Rutin"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/xrutinnon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Absen NOn Rutin"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+
+                    <TextView
+                        android:id="@+id/pelanggaran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="pelanggaran"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+
+                    <TextView
+                        android:id="@+id/catatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:text="Catatan"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+                </TableRow>
+
+
+            </TableLayout>
+            <TextView
+                android:id="@+id/Normalisasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/tabel_normalisasi"
+                android:background="#f1f1f1"
+                android:textStyle="bold" />
+            <TableLayout
+                android:id="@+id/tabelNormalisasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#f1f1f1">
+
+                <TableRow
+                    android:padding="2dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="2"
+                        android:text="@string/nama"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/absen_rutin"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/absen_non_rutin"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/pelanggaran"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/catatan"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+            <TextView
+                android:id="@+id/Pembobotan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/tabel_pembobotan"
+                android:background="#f1f1f1"
+                android:textStyle="bold" />
+            <TableLayout
+                android:id="@+id/tabelPembobotan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#f1f1f1">
+
+                <TableRow
+                    android:padding="2dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="2"
+                        android:text="@string/nama"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/absen_rutin"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/absen_non_rutin"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/pelanggaran"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/catatan"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+            <TextView
+                android:id="@+id/nilaiIdeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/tabel_nilai_ideal"
+                android:background="#f1f1f1"
+                android:textStyle="bold" />
+            <TableLayout
+                android:id="@+id/tabelNilaiid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#f1f1f1">
+
+                <TableRow
+                    android:padding="2dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/absen_rutin"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/absen_non_rutin"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/pelanggaran"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/catatan"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"/>
+
+                </TableRow>
+                <TableRow android:padding="2dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/positif"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                     />
+                    <TextView
+                        android:id="@+id/MAXrutin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Absen Rutin"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/MAXrutinnon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Absen NOn Rutin"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+
+                    <TextView
+                        android:id="@+id/MAXpelanggaran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="pelanggaran"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+
+                    <TextView
+                        android:id="@+id/MAXcatatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:text="Catatan"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+                </TableRow>
+                <TableRow android:padding="2dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/negatif"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/Minrutin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Absen Rutin"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/Minrutinnon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Absen NOn Rutin"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+
+                    <TextView
+                        android:id="@+id/Minpelanggaran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="pelanggaran"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+
+                    <TextView
+                        android:id="@+id/Mincatatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:text="Catatan"
+                        android:background="#fff"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"/>
+                </TableRow>
+
+            </TableLayout>
+            <TextView
+                android:id="@+id/jarak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/tabel_jarak"
+                android:background="#f1f1f1"
+                android:textStyle="bold" />
+            <TableLayout
+                android:id="@+id/tabelJArak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#f1f1f1">
+                <TableRow
+                    android:padding="2dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="2"
+                        android:text="@string/nama"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        />
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:text="@string/positif"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/negatif"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true" />
+
+
+
+                </TableRow>
+
+            </TableLayout>
+            <TextView
+                android:id="@+id/ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/tabel_perankingan"
+                android:background="#f1f1f1"
+                android:textStyle="bold" />
+            <TableLayout
+                android:id="@+id/tabelValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#f1f1f1">
+            </TableLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

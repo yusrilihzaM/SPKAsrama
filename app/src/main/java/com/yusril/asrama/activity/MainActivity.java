@@ -1,4 +1,4 @@
-package com.yusril.asrama;
+package com.yusril.asrama.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.yusril.asrama.R;
+import com.yusril.asrama.activity.dashboard.Dashboard;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnLogin;

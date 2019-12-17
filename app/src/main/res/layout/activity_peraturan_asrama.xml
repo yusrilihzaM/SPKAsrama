@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_asrama_peraturan"
+    tools:context=".activity.hal_peraturan.PeraturanAsrama">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_banner_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo_asrama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/cerebrisans"
+        android:text="@string/peraturan"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Warga Asrama Universitas Trunojoyo Madura"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:background="#6D5692"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <TableRow android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="1."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:padding="4dp"
+                android:text="Wajib mengikuti semua kegiatan yang telah terprogram \n terutama, sholat berjamaah, tadarus, dan kajian."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="2."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:padding="4dp"
+                android:text="Bertindak jujur, tidak mengambil \n atau mempergunakan hak milik orang lain."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="3."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:padding="4dp"
+                android:text="Berpakaian sopan, pantas dan menutup aurat."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="4."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:padding="4dp"
+                android:text="Menerima tamu ditempat yang telah ditentukan, \n yaitu lobi bawah setiap gedung  dan tidak diizinkan\n membawa tamu kedalam kamar dan menginap di asrama."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="5."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:padding="4dp"
+                android:text="Kembali ke asrama sesuai waktu yang\n telah ditentukan (22.00 WIB)."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="6."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:padding="4dp"
+                android:text="Menjaga kebersihan kamar dan\nlingkungan asrama serta tidak merusak fasilitas asrama."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="7."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:padding="4dp"
+                android:text="Mendapatkan persetujuan tertulis \ndari musahhil bila akan\n meninggalkan asrama pada saat kegiatan \n atau diluar jadwal yang ditentukan."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="8."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:padding="4dp"
+                android:text="Dilarang membawa\ndan menggunakan peralatan elektronik berdaya besar."
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

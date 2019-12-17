@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_back"
-    tools:context=".KriteriaActivity">
+    tools:context=".activity.hal_kriteria.KriteriaActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -35,7 +35,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginLeft="20dp"
         android:layout_marginTop="100dp"
         android:layout_marginRight="20dp"
@@ -55,7 +54,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:background="@drawable/bg_edt_add"
+            android:paddingLeft="8dp"
+            android:textColor="#fff"
             android:hint="Absen Rutin"
+            android:inputType="numberDecimal"
             android:textColorHint="#fff" />
     </LinearLayout>
 
@@ -82,6 +84,9 @@
             android:layout_marginLeft="8dp"
             android:background="@drawable/bg_edt_add"
             android:hint="Absen Non Rutin"
+            android:inputType="numberDecimal"
+            android:paddingLeft="8dp"
+            android:textColor="#fff"
             android:textColorHint="#fff" />
     </LinearLayout>
 
@@ -107,7 +112,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:background="@drawable/bg_edt_add"
-            android:hint="Absen Non Rutin"
+            android:hint="Pelanggaran"
+            android:inputType="numberDecimal"
+            android:paddingLeft="8dp"
+            android:textColor="#fff"
             android:textColorHint="#fff" />
     </LinearLayout>
 
@@ -133,7 +141,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:background="@drawable/bg_edt_add"
-            android:hint="Absen Non Rutin"
+            android:hint="Catatan"
+            android:inputType="numberDecimal"
+            android:paddingLeft="8dp"
+            android:textColor="#fff"
             android:textColorHint="#fff" />
     </LinearLayout>
 

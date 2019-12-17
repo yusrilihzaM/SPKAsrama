@@ -1,15 +1,17 @@
-package com.yusril.asrama;
+package com.yusril.asrama.activity.hal_peraturan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Dashboard extends AppCompatActivity {
+import com.yusril.asrama.R;
+
+public class PeraturanAsrama extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_peraturan_asrama);
         getSupportActionBar().hide();
     }
 }

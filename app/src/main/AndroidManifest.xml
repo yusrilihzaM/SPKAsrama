@@ -9,10 +9,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TambahMahasiswa"></activity>
-        <activity android:name=".KriteriaActivity" />
-        <activity android:name=".Dashboard" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.hal_peraturan.PeraturanAsrama"></activity>
+        <activity android:name=".activity.hal_hasil.PerhitunganActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.hal_hasil.HasilActivity" />
+        </activity>
+        <activity
+            android:name=".activity.hal_tambah_mhs.DetailMahasiswaActivity"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.hal_tambah_mhs.List_mahasiswa" />
+        </activity>
+        <activity android:name=".activity.hal_hasil.HasilActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.dashboard.Dashboard" />
+        </activity>
+        <activity android:name=".activity.hal_tambah_mhs.List_mahasiswa">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.dashboard.Dashboard" />
+        </activity>
+        <activity
+            android:name=".activity.hal_tambah_mhs.TambahMahasiswa"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.hal_tambah_mhs.List_mahasiswa" />
+        </activity>
+        <activity
+            android:name=".activity.hal_kriteria.KriteriaActivity"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.dashboard.Dashboard" />
+        </activity>
+        <activity android:name=".activity.dashboard.Dashboard" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
